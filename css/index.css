@@ -2,10 +2,9 @@ html,body,.container {
   height: 100%;
 }
 body {
-  background: #008888;
+  background: #7ca7a7;
   display: grid;
-  justify-content: right;
-  align-items: center;
+  align-items: left;
   place-items: center;
   height: 100vh;
   margin: 1;
@@ -58,30 +57,30 @@ body {
 
 .balloon-1,.balloon-2,.balloon-3,.balloon-4{
   position: absolute;
-  width: 85px;
-  height: 95px;
+  width: 65px;
+  height: 55px;
   border-radius: 50%;
 }
 
 .balloon-1{
   background-color: rgba(255, 40, 90, 0.7);
   left: -10px;
-  top: 50px;
+  top: 20px;
 }
 
 .balloon-2{
   background-color: rgba(9, 215, 90, 0.7);
   left: 50px;
-  top: 20px;
+  top: 40px;
 }
 .balloon-3{
   background-color: rgba(255, 186, 90, 0.7);
   left: 110px;
-  top: 40px;
+  top: 10px;
 }
 .balloon-4{
   background-color: rgba(12, 122, 159, 0.7);
-  left: 170px;
+  left: 150px;
   top: 50px;
 }
 
@@ -91,11 +90,11 @@ body {
 .balloon-4::before{
   content: "";
   position: absolute;
-  width: 1px;
-  height: 155px;
+  width: 2px;
+  height: 200px;
   background-color: #ffc848;
-  top: 95px;
-  left: 43px;
+  top: 52px;
+  left: 35px;
 }
 
 .balloon-1::after,
@@ -159,13 +158,69 @@ p{
 
 .persorn-card{
   display: flex;
-  width: 200px;
+  width: 420px;
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+  position: relative;
+  z-index: 1; /* Make sure it's above other content */;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: shrinkGlow 1.5s infinite alternate; /* Shrink animation */
+  animation: shrinkGlow 2.5s infinite alternate; /* Shrink animation */
+}
+
+.persorn-card-2{
+  display: flex;
+  width: 420px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Make sure it's above other content */;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: shrinkGlow-2 2.5s infinite alternate; /* Shrink animation */
+}
+
+.persorn-card-3{
+  display: flex;
+  width: 420px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Make sure it's above other content */;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: shrinkGlow-3 2.5s infinite alternate; /* Shrink animation */
+}
+
+.persorn-card-4{
+  display: flex;
+  width: 420px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Make sure it's above other content */;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: shrinkGlow-4 2.5s infinite alternate; /* Shrink animation */
+}
+
+.card-content {
+  padding: 5px;
+  flex-grow: 1; /* Fill the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
 }
 
 .imgCard {
@@ -198,10 +253,57 @@ p{
     box-shadow: 0 0 10px rgba(0, 170, 255, 0.5); /* Glowing effect */
   }
 }
+
+@keyframes shrinkGlow-2 {
+  0% {
+    transform: scale(1); /* Full size */
+    box-shadow: 0 0 10px rgba(77, 255, 0, 0.5);
+  }
+  50% {
+    transform: scale(0.9); /* Shrink effect */
+    box-shadow: 0 0 20px rgba(77, 255, 0, 1); /* Glowing effect */
+  }
+  100% {
+    transform: scale(1); /* Shrink effect */
+    box-shadow: 0 0 10px rgba(77, 255, 0, 0.5); /* Glowing effect */
+  }
+}
+
+@keyframes shrinkGlow-3 {
+  0% {
+    transform: scale(1); /* Full size */
+    box-shadow: 0 0 10px rgba(214, 37, 199, 0.5);
+  }
+  50% {
+    transform: scale(0.9); /* Shrink effect */
+    box-shadow: 0 0 20px rgba(214, 37, 199, 1); /* Glowing effect */
+  }
+  100% {
+    transform: scale(1); /* Shrink effect */
+    box-shadow: 0 0 10px rgba(214, 37, 199, 0.5); /* Glowing effect */
+  }
+}
+
+@keyframes shrinkGlow-4 {
+  0% {
+    transform: scale(1); /* Full size */
+    box-shadow: 0 0 10px rgba(233, 215, 113, 0.5);
+  }
+  50% {
+    transform: scale(0.9); /* Shrink effect */
+    box-shadow: 0 0 20px rgba(233, 215, 113, 1); /* Glowing effect */
+  }
+  100% {
+    transform: scale(1); /* Shrink effect */
+    box-shadow: 0 0 10px rgba(233, 215, 113, 1); /* Glowing effect */
+  }
+}
+
 .card-img {
   width: 100%; /* Adjust image width */
-  height: 100%; /* Make image fill the height */
+  height: 90%; /* Make image fill the height */
   object-fit: scale-down; /* Maintain aspect ratio */
+  padding-top: 10px;
 }
 
 
@@ -213,11 +315,8 @@ p{
 }
 
 @media only screen and (max-width: 768px) {
-  .card {
-    height: 30vh;
-    width: 50vw;
-    flex-direction: row-reverse;
-    justify-content: center;
+  body {
+    height: 150vh;
   }
 
 }
