@@ -156,52 +156,70 @@ p{
   text-align: center;
   margin: 30px;
 }
-.card {
-  background: #fdfdfd;
-  border-radius: 4px;
-  height: 35vh;
-  width: 30vw;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  text-align: center;
+
+.persorn-card{
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: shrinkGlow 1.5s infinite alternate; /* Shrink animation */
 }
 
-.card * {
-  transition: all 0.2s ease-in-out;
+.imgCard {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+  }
+}
+
+@keyframes shrinkGlow {
+  0% {
+    transform: scale(1); /* Full size */
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+  }
+  50% {
+    transform: scale(0.9); /* Shrink effect */
+    box-shadow: 0 0 20px rgba(0, 170, 255, 1); /* Glowing effect */
+  }
+  100% {
+    transform: scale(1); /* Shrink effect */
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5); /* Glowing effect */
+  }
+}
+.card-img {
+  width: 100%; /* Adjust image width */
+  height: 100%; /* Make image fill the height */
+  object-fit: scale-down; /* Maintain aspect ratio */
+}
+
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  margin: 20px 0;
 }
 
 @media only screen and (max-width: 768px) {
   .card {
     height: 30vh;
-    width: 80vw;
+    width: 50vw;
     flex-direction: row-reverse;
     justify-content: center;
   }
-  img.birthday {
-    width: 100%;
-    max-width: 50vh;
-    max-height: unset;
-  }
-  .text {
-    padding: 1em;
-  }
-}
-.card img.birthday {
-  max-height: 40vh;
-  width: 100%;
-  max-width: 50vh;
+
 }
 
-.muted {
-  opacity: 0.8;
-}
-
-.space {
-  height: 100px;
-}
 
