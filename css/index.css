@@ -17,7 +17,8 @@ body {
   height: 250px;
   cursor: pointer;
   transform-style: preserve-3d;
-  transition: 1s;
+  transition: 2s ease-in-out;
+  border: 2px solid black;
 }
 .birthdayCard:hover {
   transform: perspective(2000px) rotate(4deg);
@@ -40,7 +41,8 @@ body {
   overflow: hidden;
   transform-origin: left;
   box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
-  transition: 0.7s;
+  transition: 1s;
+  border: 2px solid black;
 }
 
 .happy {
@@ -154,6 +156,8 @@ p{
   color: #333;
   text-align: center;
   margin: 30px;
+  border: 2px solid black;
+
 }
 
 .persorn-card{
@@ -224,7 +228,18 @@ p{
 }
 
 .imgCard {
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: sliding 1.5s ease-in-out forwards;
+}
+
+@keyframes sliding {
+  from {
+    transform: scale(0.5); /* Starts at 50% size */
+    opacity: 1;
+  }
+  to {
+    transform: scale(1); /* Grows to original size */
+    opacity: 1;
+  }
 }
 
 @keyframes glow {
