@@ -168,8 +168,8 @@ p{
   overflow: hidden;
   position: relative;
   z-index: 1; /* Make sure it's above other content */;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: shrinkGlow 2.5s infinite alternate; /* Shrink animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+  animation: shrinkGlow 5s infinite alternate; /* Shrink animation */
 }
 
 .persorn-card-2{
@@ -180,8 +180,8 @@ p{
   overflow: hidden;
   position: relative;
   z-index: 1; /* Make sure it's above other content */;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: shrinkGlow-2 2.5s infinite alternate; /* Shrink animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+  animation: shrinkGlow-2 5s infinite alternate; /* Shrink animation */
 }
 
 .persorn-card-3{
@@ -192,8 +192,8 @@ p{
   overflow: hidden;
   position: relative;
   z-index: 1; /* Make sure it's above other content */;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: shrinkGlow-3 2.5s infinite alternate; /* Shrink animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+  animation: shrinkGlow-3 5s infinite alternate; /* Shrink animation */
 }
 
 .persorn-card-4{
@@ -204,8 +204,8 @@ p{
   overflow: hidden;
   position: relative;
   z-index: 1; /* Make sure it's above other content */;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: shrinkGlow-4 2.5s infinite alternate; /* Shrink animation */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+  animation: shrinkGlow-4 5s infinite alternate; /* Shrink animation */
 }
 
 .card-content {
@@ -261,8 +261,8 @@ p{
     box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
   }
   50% {
-    transform: scale(0.9); /* Shrink effect */
-    box-shadow: 0 0 20px rgba(0, 170, 255, 1); /* Glowing effect */
+    transform: scale(0.95); /* Shrink effect */
+    box-shadow: 0 0 15px rgba(0, 170, 255, 1); /* Glowing effect */
   }
   100% {
     transform: scale(1); /* Shrink effect */
@@ -276,8 +276,8 @@ p{
     box-shadow: 0 0 10px rgba(77, 255, 0, 0.5);
   }
   50% {
-    transform: scale(0.9); /* Shrink effect */
-    box-shadow: 0 0 20px rgba(77, 255, 0, 1); /* Glowing effect */
+    transform: scale(0.95); /* Shrink effect */
+    box-shadow: 0 0 15px rgba(77, 255, 0, 1); /* Glowing effect */
   }
   100% {
     transform: scale(1); /* Shrink effect */
@@ -291,8 +291,8 @@ p{
     box-shadow: 0 0 10px rgba(214, 37, 199, 0.5);
   }
   50% {
-    transform: scale(0.9); /* Shrink effect */
-    box-shadow: 0 0 20px rgba(214, 37, 199, 1); /* Glowing effect */
+    transform: scale(0.95); /* Shrink effect */
+    box-shadow: 0 0 15px rgba(214, 37, 199, 1); /* Glowing effect */
   }
   100% {
     transform: scale(1); /* Shrink effect */
@@ -306,8 +306,8 @@ p{
     box-shadow: 0 0 10px rgba(233, 215, 113, 0.5);
   }
   50% {
-    transform: scale(0.9); /* Shrink effect */
-    box-shadow: 0 0 20px rgba(233, 215, 113, 1); /* Glowing effect */
+    transform: scale(0.95); /* Shrink effect */
+    box-shadow: 0 0 15px rgba(233, 215, 113, 1); /* Glowing effect */
   }
   100% {
     transform: scale(1); /* Shrink effect */
@@ -336,6 +336,7 @@ p{
   }
 
 }
+
 @keyframes walk {
   0% {
     transform: translateX(0);
