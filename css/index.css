@@ -336,3 +336,22 @@ p{
   }
 
 }
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px); /* Move right */
+  }
+  100% {
+    transform: translateX(-170px); /* Move back to left */
+  }
+}
+
+.monkey {
+  animation: walk 4s linear infinite;
+}
+.monkey-div{
+  display: flex;
+  position: relative;
+}
